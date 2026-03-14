@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Homevly | Get Your Cash Offer Today</title>
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
+
   :root {
     --forest: #1a3a2a;
     --forest-light: #234d38;
@@ -1248,477 +1239,103 @@
     .float-badge { display: none; }
     footer { padding: 48px 24px 24px; }
   }
-</style>
-</head>
-<body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="#" class="nav-logo">
-    <span class="nav-logo-text">Home<span>vly</span></span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="how-it-works.html">How It Works</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="reviews.html">Reviews</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="https://www.facebook.com/profile.php?id=61586917949416" target="_blank" rel="noopener noreferrer" class="nav-fb">f</a></li>
-    <li><a href="https://x.com/Homevly" target="_blank" rel="noopener noreferrer" class="nav-fb">𝕏</a></li>
-    <li><a href="get-cash-offer.html" class="nav-cta">Get My Offer</a></li>
-  </ul>
-  <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-left">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Serving Milwaukee, Madison &amp; Surrounding Areas
-      </div>
-      <h1>Sell your home <em>the easy way</em></h1>
-      <p class="hero-sub">Skip the listings, skip the showings, skip the stress. Get a fair cash offer on your home and close on your timeline — no agents, no fees, no surprises.</p>
-      <div class="address-form" id="hero-form">
-        <div class="address-input-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <input type="text" class="address-input" id="hero-address" placeholder="Enter your property address">
-        </div>
-        <button class="btn-primary" onclick="showContactForm('hero')">Get My Offer</button>
-      </div>
-      <div class="lead-step-2" id="hero-step2">
-        <div class="lead-address-confirm">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-          <span id="hero-address-display"></span>
-        </div>
-        <div class="lead-fields">
-          <input type="text" class="lead-field" id="hero-name" placeholder="Full name">
-          <input type="tel" class="lead-field" id="hero-phone" placeholder="Phone number">
-        </div>
-        <input type="email" class="lead-field" id="hero-email" placeholder="Email address (optional)">
-        <button class="btn-primary" onclick="submitLead('hero')" style="width:100%;">Submit — We'll Reach Out Shortly</button>
-      </div>
-      <div class="lead-success" id="hero-success">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-        <span>You're all set! Our team will be in touch soon.</span>
-      </div>
-      <div class="hero-trust">
-        <div class="hero-trust-stars">★★★★★</div>
-        <span><strong>4.9/5</strong> from 200+ homeowners</span>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-card" style="position: relative;">
-        <div class="float-badge float-badge-1">
-          <div class="float-badge-icon green">✓</div>
-          <span>Offer sent!</span>
-        </div>
-        <div class="float-badge float-badge-2">
-          <div class="float-badge-icon gold">⚡</div>
-          <span>Closes in 14 days</span>
-        </div>
-        <div class="hero-card-header">
-          <div>
-            <div class="hero-card-label">Your Cash Offer</div>
-            <div class="hero-card-amount">$247,500</div>
-          </div>
-          <div class="hero-card-tag">Cash Offer</div>
-        </div>
-        <div class="hero-card-details">
-          <div class="hero-card-row">
-            <span class="hero-card-row-label">Agent Commissions</span>
-            <span class="hero-card-row-value highlight">$0</span>
-          </div>
-          <div class="hero-card-row">
-            <span class="hero-card-row-label">Repairs Needed</span>
-            <span class="hero-card-row-value highlight">None</span>
-          </div>
-          <div class="hero-card-row">
-            <span class="hero-card-row-label">Closing Costs</span>
-            <span class="hero-card-row-value highlight">We Cover It</span>
-          </div>
-          <div class="hero-card-row">
-            <span class="hero-card-row-label">You Walk Away With</span>
-            <span class="hero-card-row-value" style="font-size: 18px;">$247,500</span>
-          </div>
-        </div>
-        <div class="hero-card-timeline">
-          <div class="timeline-icon">📅</div>
-          <div class="timeline-text">
-            <strong>Close on your schedule</strong>
-            Choose your closing date — as fast as 7 days or up to 60 days
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="section" id="how-it-works">
-  <div class="section-header">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">Three steps, zero stress</h2>
-    <p class="section-sub">We've simplified selling your home down to what matters — a fair offer, a fast close, and your cash in hand.</p>
-  </div>
-  <div class="steps-grid">
-    <div class="step-card">
-      <div class="step-number">1</div>
-      <div class="step-icon">📋</div>
-      <h3>Tell Us About Your Home</h3>
-      <p>Enter your address and answer a few quick questions. No need to clean, stage, or fix anything — we buy homes in any condition.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-number">2</div>
-      <div class="step-icon">💰</div>
-      <h3>Get Your Cash Offer</h3>
-      <p>Receive a no-obligation, fair cash offer within 24 hours. No hidden fees, no bait-and-switch — just a straightforward number.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-number">3</div>
-      <div class="step-icon">🔑</div>
-      <h3>Close &amp; Get Paid</h3>
-      <p>Pick your closing date. We handle all the paperwork, cover closing costs, and put cash directly in your account.</p>
-    </div>
-  </div>
-</section>
-
-<!-- BENEFITS -->
-<section class="benefits" id="benefits">
-  <div class="benefits-inner">
-    <div class="section-header">
-      <div class="section-label">Why Homevly</div>
-      <h2 class="section-title">Meant for ease, not headaches</h2>
-      <p class="section-sub">We're not a faceless corporation — we're your neighbors across Southern Wisconsin, doing right by the people in our communities.</p>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-icon">⚡</div>
-        <div>
-          <h3>Offers in 24 Hours</h3>
-          <p>No waiting weeks for an appraisal or hoping a buyer's financing goes through. You'll have a real cash offer in your hands within one business day.</p>
-        </div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🏠</div>
-        <div>
-          <h3>Any Condition, Any Situation</h3>
-          <p>Behind on payments, facing foreclosure, inherited a property, or just ready to move? We buy homes as-is — no repairs, no cleaning, no judgment.</p>
-        </div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🤝</div>
-        <div>
-          <h3>Local &amp; Relationship-Driven</h3>
-          <p>We're not a tech algorithm. We're real people based in Milwaukee and Madison who care about fair deals and building long-term trust in the communities we serve.</p>
-        </div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🔒</div>
-        <div>
-          <h3>Zero Fees, Zero Commissions</h3>
-          <p>No 6% agent commission. No closing costs. No surprise deductions. The offer we give you is the money you walk away with.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMPARISON -->
-<section class="section" id="compare">
-  <div class="section-header">
-    <div class="section-label">Compare Your Options</div>
-    <h2 class="section-title">See the difference for yourself</h2>
-    <p class="section-sub">When you compare the numbers and the experience, the choice is clear.</p>
-  </div>
-  <div class="comparison-table">
-    <div class="comp-header">
-      <span></span>
-      <span class="homevly-col">Homevly</span>
-      <span>Traditional Sale</span>
-    </div>
-    <div class="comp-row">
-      <span>Offer timeline</span>
-      <span class="comp-check">24 hours</span>
-      <span class="comp-maybe">30–90 days</span>
-    </div>
-    <div class="comp-row">
-      <span>Agent commissions</span>
-      <span class="comp-check">$0</span>
-      <span class="comp-x">5–6%</span>
-    </div>
-    <div class="comp-row">
-      <span>Closing costs</span>
-      <span class="comp-check">We pay</span>
-      <span class="comp-x">2–4%</span>
-    </div>
-    <div class="comp-row">
-      <span>Home repairs required</span>
-      <span class="comp-check">None</span>
-      <span class="comp-x">Often $5k–$15k+</span>
-    </div>
-    <div class="comp-row">
-      <span>Showings &amp; open houses</span>
-      <span class="comp-check">None</span>
-      <span class="comp-x">Multiple</span>
-    </div>
-    <div class="comp-row">
-      <span>Risk of deal falling through</span>
-      <span class="comp-check">Zero</span>
-      <span class="comp-x">Common</span>
-    </div>
-    <div class="comp-row">
-      <span>Choose your closing date</span>
-      <span class="comp-check">✓</span>
-      <span class="comp-x">✗</span>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section" id="reviews">
-  <div class="section-header">
-    <div class="section-label">Testimonials</div>
-    <h2 class="section-title">Homeowners love working with us</h2>
-    <p class="section-sub">Real stories from real people across Wisconsin who chose the easier path.</p>
-  </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p>I was behind on payments and panicking. Homevly gave me a fair price in one day and we closed in two weeks. They literally saved my credit. Can't thank them enough.</p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar">M</div>
-        <div>
-          <div class="testimonial-name">Marcus T.</div>
-          <div class="testimonial-location">Milwaukee, WI</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p>We inherited my mom's house and had no idea what to do. These guys walked us through everything with patience and respect. The whole process was so smooth.</p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar">S</div>
-        <div>
-          <div class="testimonial-name">Sarah &amp; David K.</div>
-          <div class="testimonial-location">Middleton, WI</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p>No repairs, no showings, no agents taking a cut. I got more in my pocket than I would have listing it traditionally. Wish I knew about Homevly sooner.</p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar">R</div>
-        <div>
-          <div class="testimonial-name">Roberto F.</div>
-          <div class="testimonial-location">Racine, WI</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta" id="cta">
-  <div class="cta-inner">
-    <h2>Ready to make the easy move?</h2>
-    <p>Get your no-obligation cash offer today. No pressure, no games — just a fair deal.</p>
-    <div class="cta-form" id="cta-form">
-      <div class="address-input-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <input type="text" class="address-input" id="cta-address" placeholder="Enter your property address">
-      </div>
-      <button class="btn-gold" onclick="showContactForm('cta')">Get My Offer</button>
-    </div>
-    <div class="lead-step-2" id="cta-step2" style="max-width:520px;margin:0 auto;position:relative;z-index:1;">
-      <div class="lead-address-confirm">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-        <span id="cta-address-display"></span>
-      </div>
-      <div class="lead-fields">
-        <input type="text" class="lead-field" id="cta-name" placeholder="Full name">
-        <input type="tel" class="lead-field" id="cta-phone" placeholder="Phone number">
-      </div>
-      <input type="email" class="lead-field" id="cta-email" placeholder="Email address (optional)">
-      <button class="btn-gold" onclick="submitLead('cta')" style="width:100%;">Submit — We'll Reach Out Shortly</button>
-    </div>
-    <div class="lead-success" id="cta-success" style="max-width:520px;margin:0 auto;position:relative;z-index:1;">
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-      <span>You're all set! Our team will be in touch soon.</span>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="nav-logo-text" style="color: var(--white);">Home<span>vly</span></span>
-        <p>Southern Wisconsin's Trusted Home Buying Experts Providing Real Solutions For Home Owners.</p>
-        <a href="mailto:info@homevly.com" style="color: rgba(255,255,255,0.45); font-size: 14px; text-decoration: none; font-weight: 300; display: inline-block; margin-top: 12px; transition: color 0.2s;" onmouseover="this.style.color='#d4a843'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">info@homevly.com</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="about.html">About Us</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Sellers</h4>
-        <a href="get-cash-offer.html">Get a Cash Offer</a>
-        <a href="sell-home-fast.html">Sell My Home Fast</a>
-        <a href="foreclosure-help.html">Foreclosure Help</a>
-        <a href="inherited-property.html">Inherited Property</a>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <a href="faq.html">FAQ</a>
-        <a href="#">Blog</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-of-service.html">Terms of Service</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Homevly. All rights reserved.</p>
-      <div class="footer-social">
-        <a href="https://www.facebook.com/profile.php?id=61586917949416" target="_blank" rel="noopener noreferrer">f</a>
-        <a href="https://x.com/Homevly" target="_blank" rel="noopener noreferrer">𝕏</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // Navbar scroll effect
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-  });
-
-  // ─── Lead Capture ───
-
-  // Step 1: Validate address, show contact form
-  function showContactForm(src) {
-    const input = document.getElementById(src + '-address');
-    const address = input.value.trim();
-
-    input.classList.remove('error');
-
-    if (!address) {
-      input.classList.add('error');
-      input.placeholder = 'Please enter your address';
-      input.focus();
-      return;
-    }
-
-    // Hide step 1, show step 2
-    document.getElementById(src + '-form').style.display = 'none';
-    document.getElementById(src + '-address-display').textContent = address;
-    document.getElementById(src + '-step2').classList.add('show');
-    document.getElementById(src + '-name').focus();
+  /* ========== PAGE HERO (inner pages) ========== */
+  .page-hero {
+    padding: 140px 48px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
   }
 
-  // Step 2: Validate contact info, submit to Formspree
-  function submitLead(src) {
-    const address = document.getElementById(src + '-address').value.trim();
-    const name = document.getElementById(src + '-name');
-    const phone = document.getElementById(src + '-phone');
-    const email = document.getElementById(src + '-email');
-    const submitBtn = document.querySelector('#' + src + '-step2 button');
-
-    // Clear errors
-    [name, phone].forEach(f => f.classList.remove('error'));
-
-    let valid = true;
-    if (!name.value.trim()) { name.classList.add('error'); valid = false; }
-    if (!phone.value.trim()) { phone.classList.add('error'); valid = false; }
-    if (!valid) return;
-
-    // Disable button while submitting
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Submitting...';
-
-    // Send to Formspree
-    fetch('https://formspree.io/f/xdawlkkr', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        address: address,
-        name: name.value.trim(),
-        phone: phone.value.trim(),
-        email: email.value.trim(),
-        submitted: new Date().toISOString()
-      })
-    })
-    .then(res => {
-      if (res.ok) {
-        document.getElementById(src + '-step2').classList.remove('show');
-        document.getElementById(src + '-step2').style.display = 'none';
-        document.getElementById(src + '-success').classList.add('show');
-      } else {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Submit — We\'ll Reach Out Shortly';
-        alert('Something went wrong. Please try again.');
-      }
-    })
-    .catch(() => {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Submit — We\'ll Reach Out Shortly';
-      alert('Connection error. Please try again.');
-    });
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(123, 166, 138, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
   }
 
-  // Enter key support
-  document.querySelectorAll('.address-input').forEach(input => {
-    input.addEventListener('keydown', e => {
-      if (e.key === 'Enter') showContactForm(input.id.replace('-address', ''));
-    });
-    input.addEventListener('input', () => {
-      input.classList.remove('error');
-      input.placeholder = 'Enter your property address';
-    });
-  });
+  .page-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
 
-  // Enter key for lead fields
-  document.querySelectorAll('.lead-field').forEach(field => {
-    field.addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
-        const src = field.id.split('-')[0];
-        submitLead(src);
-      }
-    });
-    field.addEventListener('input', () => field.classList.remove('error'));
-  });
+  .page-hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(36px, 4.5vw, 56px);
+    line-height: 1.15;
+    color: var(--forest);
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
 
-  // Scroll animation observer
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
+  .page-hero-sub {
+    font-size: 18px;
+    color: var(--text-light);
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 560px;
+    margin: 0 auto;
+  }
 
-  document.querySelectorAll('.step-card, .benefit-card, .testimonial-card, .comparison-table').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease-out';
-    observer.observe(el);
-  });
+  /* ========== CONTENT BLOCKS ========== */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
 
-  document.querySelectorAll('.steps-grid, .benefits-grid, .testimonials-grid').forEach(grid => {
-    const cards = grid.children;
-    Array.from(cards).forEach((card, i) => {
-      card.style.transitionDelay = `${i * 0.15}s`;
-    });
-  });
-</script>
+  .content-block h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: var(--forest);
+    margin-bottom: 16px;
+  }
 
-</body>
-</html>
+  .content-block p {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  /* ========== LEGAL CONTENT ========== */
+  .legal-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .legal-content h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--forest);
+    margin: 32px 0 12px;
+  }
+
+  .legal-content h2:first-child {
+    margin-top: 0;
+  }
+
+  .legal-content p {
+    font-size: 15px;
+    color: var(--text-light);
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .page-hero { padding: 100px 24px 48px; }
+    .content-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
