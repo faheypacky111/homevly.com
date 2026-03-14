@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inherited a property? We'll make it easy | Homevly — Southern Wisconsin</title>
+<meta name="description" content="Inherited a house in Milwaukee, Madison, or Southern Wisconsin? Homevly buys inherited properties as-is for cash. No repairs, no stress, no hassle.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="canonical" href="https://homevly.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-text">Home<span>vly</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="how-it-works.html">How It Works</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="https://www.facebook.com/profile.php?id=61586917949416" target="_blank" rel="noopener noreferrer" class="nav-fb">f</a></li>
+    <li><a href="https://x.com/Homevly" target="_blank" rel="noopener noreferrer" class="nav-fb">𝕏</a></li>
+    <li><a href="get-cash-offer.html" class="nav-cta">Get My Offer</a></li>
+  </ul>
+  <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label">Sellers</div>
+    <h1>Inherited a property? We'll make it easy</h1>
+    <p class="page-hero-sub">Dealing with an inherited home can be overwhelming — especially when it needs work or you live far away. We buy inherited properties as-is.</p>
+    <a href="get-cash-offer.html" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Get My Cash Offer</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="content-block fade-in" style="max-width:720px;margin:0 auto;">
+    <p>Inheriting a home often comes during one of life's hardest moments. And with it comes property taxes, maintenance, insurance, and the stress of figuring out what to do next — especially if the home needs significant repairs or you don't live nearby.</p><p>Homevly takes the burden off your plate. We buy inherited properties across Southern Wisconsin in any condition, handle all the logistics, and close on your schedule.</p>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="benefits-inner">
+    <div class="section-header">
+      <div class="section-label">Why Homevly</div>
+      <h2 class="section-title" style="color:var(--white)">How we help</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">📦</div>
+        <div><h3>Sell As-Is</h3><p>Don't worry about cleaning out the property or making repairs. We handle all of that.</p></div>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">📍</div>
+        <div><h3>Out of State? No Problem</h3><p>We work with remote sellers every day. You don't need to be local to close.</p></div>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">⚖️</div>
+        <div><h3>Probate Experience</h3><p>We understand the probate process and can work within its timeline.</p></div>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">❤️</div>
+        <div><h3>Handled With Care</h3><p>We know this is personal. Our team treats every inherited home sale with the respect it deserves.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta" id="cta">
+  <div class="cta-inner">
+    <h2>Ready to make the easy move?</h2>
+    <p>Get your no-obligation cash offer today. No pressure, no games — just a fair deal.</p>
+    <div class="cta-form" id="cta-form">
+      <div class="address-input-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <input type="text" class="address-input" id="cta-address" placeholder="Enter your property address">
+      </div>
+      <button class="btn-gold" onclick="showContactForm('cta')">Get My Offer</button>
+    </div>
+    <div class="lead-step-2" id="cta-step2" style="max-width:520px;margin:0 auto;position:relative;z-index:1;">
+      <div class="lead-address-confirm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        <span id="cta-address-display"></span>
+      </div>
+      <div class="lead-fields">
+        <input type="text" class="lead-field" id="cta-name" placeholder="Full name">
+        <input type="tel" class="lead-field" id="cta-phone" placeholder="Phone number">
+      </div>
+      <input type="email" class="lead-field" id="cta-email" placeholder="Email address (optional)">
+      <button class="btn-gold" onclick="submitLead('cta')" style="width:100%;">Submit — We'll Reach Out Shortly</button>
+    </div>
+    <div class="lead-success" id="cta-success" style="max-width:520px;margin:0 auto;position:relative;z-index:1;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+      <span>You're all set! Our team will be in touch soon.</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="text-decoration:none;"><span class="nav-logo-text" style="color: var(--white);">Home<span>vly</span></span></a>
+        <p>Southern Wisconsin's Trusted Home Buying Experts Providing Real Solutions For Home Owners.</p>
+        <a href="mailto:info@homevly.com" style="color: rgba(255,255,255,0.45); font-size: 14px; text-decoration: none; font-weight: 300; display: inline-block; margin-top: 12px; transition: color 0.2s;" onmouseover="this.style.color='#d4a843'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">info@homevly.com</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Sellers</h4>
+        <a href="get-cash-offer.html">Get a Cash Offer</a>
+        <a href="sell-home-fast.html">Sell My Home Fast</a>
+        <a href="foreclosure-help.html">Foreclosure Help</a>
+        <a href="inherited-property.html">Inherited Property</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="faq.html">FAQ</a>
+        <a href="#">Blog</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Homevly. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61586917949416" target="_blank" rel="noopener noreferrer">f</a>
+        <a href="https://x.com/Homevly" target="_blank" rel="noopener noreferrer">𝕏</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Lead capture
+  function showContactForm(src) {
+    const input = document.getElementById(src + '-address');
+    const address = input.value.trim();
+    input.classList.remove('error');
+    if (!address) { input.classList.add('error'); input.placeholder = 'Please enter your address'; input.focus(); return; }
+    document.getElementById(src + '-form').style.display = 'none';
+    document.getElementById(src + '-address-display').textContent = address;
+    document.getElementById(src + '-step2').classList.add('show');
+    document.getElementById(src + '-name').focus();
+  }
+
+  function submitLead(src) {
+    const address = document.getElementById(src + '-address').value.trim();
+    const name = document.getElementById(src + '-name');
+    const phone = document.getElementById(src + '-phone');
+    const email = document.getElementById(src + '-email');
+    const submitBtn = document.querySelector('#' + src + '-step2 button');
+    [name, phone].forEach(f => f.classList.remove('error'));
+    let valid = true;
+    if (!name.value.trim()) { name.classList.add('error'); valid = false; }
+    if (!phone.value.trim()) { phone.classList.add('error'); valid = false; }
+    if (!valid) return;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+    fetch('https://formspree.io/f/xdawlkkr', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ address, name: name.value.trim(), phone: phone.value.trim(), email: email.value.trim(), submitted: new Date().toISOString() })
+    }).then(res => {
+      if (res.ok) {
+        document.getElementById(src + '-step2').classList.remove('show');
+        document.getElementById(src + '-step2').style.display = 'none';
+        document.getElementById(src + '-success').classList.add('show');
+      } else {
+        submitBtn.disabled = false; submitBtn.textContent = "Submit — We'll Reach Out Shortly";
+        alert('Something went wrong. Please try again.');
+      }
+    }).catch(() => { submitBtn.disabled = false; submitBtn.textContent = "Submit — We'll Reach Out Shortly"; alert('Connection error. Please try again.'); });
+  }
+
+  document.querySelectorAll('.address-input').forEach(input => {
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') showContactForm(input.id.replace('-address', '')); });
+    input.addEventListener('input', () => { input.classList.remove('error'); input.placeholder = 'Enter your property address'; });
+  });
+  document.querySelectorAll('.lead-field').forEach(field => {
+    field.addEventListener('keydown', e => { if (e.key === 'Enter') submitLead(field.id.split('-')[0]); });
+    field.addEventListener('input', () => field.classList.remove('error'));
+  });
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.step-card, .benefit-card, .testimonial-card, .comparison-table, .fade-in').forEach(el => {
+    el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'all 0.6s ease-out'; observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
