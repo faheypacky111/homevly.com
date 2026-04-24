@@ -4,6 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Homevly | A Real Estate Solution Company</title>
+<meta name="description" content="Sell your home the easy way. Homevly buys houses for cash across Milwaukee, Madison, and Southern Wisconsin. Fair offers in 24 hours, close in as little as 7 days.">
+<meta name="keywords" content="sell house fast Wisconsin, cash home buyers Milwaukee, cash home buyers Madison, we buy houses Wisconsin, sell my home fast, cash offer home">
+<meta name="author" content="Homevly">
+<link rel="canonical" href="https://homevly.com/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://homevly.com/">
+<meta property="og:title" content="Homevly | A Real Estate Solution Company">
+<meta property="og:description" content="Sell your home the easy way. Fair cash offers in 24 hours across Southern Wisconsin. No agents, no fees, no stress.">
+<meta property="og:image" content="https://homevly.com/apple-touch-icon.png">
+<meta property="og:site_name" content="Homevly">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="https://homevly.com/">
+<meta name="twitter:title" content="Homevly | A Real Estate Solution Company">
+<meta name="twitter:description" content="Sell your home the easy way. Fair cash offers in 24 hours across Southern Wisconsin.">
+<meta name="twitter:image" content="https://homevly.com/apple-touch-icon.png">
+<meta name="twitter:site" content="@Homevly">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -1220,7 +1240,6 @@
     .lead-step-2 .lead-fields { grid-template-columns: 1fr; }
   }
 
-  /* ========== RESPONSIVE ========== */
   @media (max-width: 1024px) {
     .hero-content { grid-template-columns: 1fr; gap: 48px; }
     .hero-right { max-width: 500px; }
@@ -1232,21 +1251,99 @@
   }
 
   @media (max-width: 768px) {
-    nav { padding: 12px 24px; }
-    .nav-links { display: none; }
+    nav { padding: 12px 20px; }
+    .nav-logo-text { font-size: 24px; }
+
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      flex-direction: column;
+      gap: 0;
+      padding: 16px 24px 24px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+      border-top: 1px solid rgba(26, 58, 42, 0.08);
+      z-index: 999;
+    }
+
+    .nav-links.show { display: flex; }
+
+    .nav-links li {
+      width: 100%;
+      border-bottom: 1px solid rgba(26, 58, 42, 0.06);
+    }
+
+    .nav-links li:last-child { border-bottom: none; margin-top: 8px; }
+
+    .nav-links a {
+      display: block;
+      padding: 14px 0;
+      font-size: 16px;
+      color: var(--forest);
+    }
+
+    .nav-links a::after { display: none; }
+
+    .nav-fb {
+      display: inline-flex !important;
+      width: 40px !important;
+      height: 40px !important;
+      margin-right: 8px;
+    }
+
+    .nav-cta {
+      text-align: center !important;
+      width: 100% !important;
+      padding: 14px 28px !important;
+    }
+
     .mobile-toggle { display: flex; }
-    .hero { padding: 100px 24px 60px; }
-    .section { padding: 60px 24px; }
-    .benefits { padding: 60px 24px; }
-    .cta { padding: 60px 24px; }
-    .cta-inner { padding: 48px 28px; }
+
+    .hero { padding: 100px 20px 60px; min-height: auto; }
+    .hero h1 { font-size: clamp(32px, 8vw, 44px); }
+    .hero-sub { font-size: 15px; }
+    .hero-stats { font-size: 13px; }
+    .section { padding: 60px 20px; }
+    .benefits { padding: 60px 20px; }
+    .cta { padding: 60px 20px; }
+    .cta-inner { padding: 40px 24px; }
+    .cta h2 { font-size: clamp(28px, 6vw, 36px); }
     .address-form { flex-direction: column; }
+    .address-form .btn-primary { width: 100%; }
     .cta-form { flex-direction: column; }
-    .comp-header, .comp-row { grid-template-columns: 1.5fr 1fr 1fr; padding: 14px 16px; }
+    .cta-form .btn-gold { width: 100%; }
+    .comp-header, .comp-row { grid-template-columns: 1.5fr 1fr 1fr; padding: 12px 14px; font-size: 13px; }
+    .comp-header div, .comp-row div { font-size: 13px; }
+    .section-title { font-size: clamp(28px, 6vw, 36px); }
+    .step-card { padding: 28px 24px; }
+    .benefit-card { padding: 28px 24px; }
+    .testimonial-card { padding: 28px 24px; }
     .footer-top { grid-template-columns: 1fr; gap: 32px; }
     .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
     .float-badge { display: none; }
-    footer { padding: 48px 24px 24px; }
+    footer { padding: 48px 20px 24px; }
+    .footer-inner { padding: 0; }
+  }
+
+  @media (max-width: 480px) {
+    nav { padding: 10px 16px; }
+    .hero { padding: 90px 16px 48px; }
+    .section { padding: 48px 16px; }
+    .benefits { padding: 48px 16px; }
+    .cta { padding: 48px 16px; }
+    .cta-inner { padding: 32px 20px; border-radius: 20px; }
+    .hero-badge { font-size: 12px; padding: 6px 14px; }
+    .address-input-wrap { padding: 14px 16px; }
+    .address-input { font-size: 15px; }
+    .btn-primary, .btn-gold { padding: 14px 24px; font-size: 14px; }
+    .step-number { font-size: 48px; }
+    .benefit-icon { width: 44px; height: 44px; font-size: 20px; }
+    .section-label { font-size: 12px; }
+    footer { padding: 40px 16px 20px; }
+    .footer-bottom p { font-size: 12px; }
   }
 </style>
 </head>
