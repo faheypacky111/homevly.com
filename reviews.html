@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a3a2a">
 <title>Reviews | What Homeowners Say About Homevly</title>
 <meta name="description" content="Read real reviews from homeowners across Milwaukee, Madison, and Southern Wisconsin who sold their homes fast with Homevly.">
+<meta name="keywords" content="sell house fast Wisconsin, cash home buyers Milwaukee, cash home buyers Madison, we buy houses Wisconsin">
+<meta name="author" content="Homevly">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="canonical" href="https://homevly.com/reviews.html">
@@ -27,24 +30,34 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SFZNZRYNF2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SFZNZRYNF2');
+</script>
+
 </head>
 <body>
 
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Homevly home">
     <span class="nav-logo-text">Home<span>vly</span></span>
   </a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="main-nav-links">
     <li><a href="how-it-works.html">How It Works</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="reviews.html">Reviews</a></li>
     <li><a href="faq.html">FAQ</a></li>
-    <li><a href="https://www.facebook.com/profile.php?id=61586917949416" target="_blank" rel="noopener noreferrer" class="nav-fb">f</a></li>
-    <li><a href="https://x.com/Homevly" target="_blank" rel="noopener noreferrer" class="nav-fb">𝕏</a></li>
+    <li><a href="https://www.facebook.com/profile.php?id=61586917949416" target="_blank" rel="noopener noreferrer" class="nav-fb" aria-label="Homevly on Facebook"><span aria-hidden="true">f</span></a></li>
+    <li><a href="https://x.com/Homevly" target="_blank" rel="noopener noreferrer" class="nav-fb" aria-label="Homevly on X"><span aria-hidden="true">𝕏</span></a></li>
     <li><a href="get-cash-offer.html" class="nav-cta">Get My Offer</a></li>
   </ul>
-  <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
-    <span></span><span></span><span></span>
+  <button class="mobile-toggle" onclick="toggleMobileMenu(this)" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav-links">
+    <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
   </button>
 </nav>
 
@@ -100,7 +113,7 @@
     <div class="cta-form" id="cta-form">
       <div class="address-input-wrap">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <input type="text" class="address-input" id="cta-address" placeholder="Enter your property address">
+        <input type="text" class="address-input" id="cta-address" placeholder="Enter your property address" aria-label="Property address">
       </div>
       <button class="btn-gold" onclick="showContactForm('cta')">Get My Offer</button>
     </div>
@@ -110,10 +123,10 @@
         <span id="cta-address-display"></span>
       </div>
       <div class="lead-fields">
-        <input type="text" class="lead-field" id="cta-name" placeholder="Full name">
-        <input type="tel" class="lead-field" id="cta-phone" placeholder="Phone number">
+        <input type="text" class="lead-field" id="cta-name" placeholder="Full name" aria-label="Full name" autocomplete="name">
+        <input type="tel" class="lead-field" id="cta-phone" placeholder="Phone number" aria-label="Phone number" autocomplete="tel">
       </div>
-      <input type="email" class="lead-field" id="cta-email" placeholder="Email address (optional)">
+      <input type="email" class="lead-field" id="cta-email" placeholder="Email address (optional)" aria-label="Email address (optional)" autocomplete="email">
       <button class="btn-gold" onclick="submitLead('cta')" style="width:100%;">Submit — We'll Reach Out Shortly</button>
     </div>
     <div class="lead-success" id="cta-success" style="max-width:520px;margin:0 auto;position:relative;z-index:1;">
@@ -124,7 +137,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
@@ -149,7 +162,6 @@
       <div class="footer-col">
         <h4>Resources</h4>
         <a href="faq.html">FAQ</a>
-        <a href="#">Blog</a>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-service.html">Terms of Service</a>
       </div>
@@ -157,7 +169,7 @@
     <div class="footer-bottom">
       <p>&copy; 2026 Homevly. All rights reserved.</p>
       <div class="footer-social">
-        <a href="https://www.facebook.com/profile.php?id=61586917949416" target="_blank" rel="noopener noreferrer">f</a>
+        <a href="https://www.facebook.com/profile.php?id=61586917949416" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">f</span><span class="sr-only">Facebook</span></a>
         <a href="https://x.com/Homevly" target="_blank" rel="noopener noreferrer">𝕏</a>
       </div>
     </div>
@@ -165,10 +177,33 @@
 </footer>
 
 <script>
-  // Navbar scroll
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
+  // Throttle utility
+  function throttle(fn, wait) {
+    let last = 0;
+    return function(...args) {
+      const now = Date.now();
+      if (now - last >= wait) { last = now; fn.apply(this, args); }
+    };
+  }
+
+  // Navbar scroll effect (throttled)
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', throttle(() => {
     nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, 100), { passive: true });
+
+  // Mobile menu toggle with ARIA
+  function toggleMobileMenu(btn) {
+    const links = document.getElementById('main-nav-links');
+    const isOpen = links.classList.toggle('show');
+    btn.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  // Pause animations when tab hidden
+  document.addEventListener('visibilitychange', () => {
+    document.querySelectorAll('.float-badge, .hero-badge-icon').forEach(el => {
+      el.style.animationPlayState = document.hidden ? 'paused' : 'running';
+    });
   });
 
   // Lead capture
@@ -221,13 +256,16 @@
     field.addEventListener('input', () => field.classList.remove('error'));
   });
 
-  // Scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.step-card, .benefit-card, .testimonial-card, .comparison-table, .fade-in').forEach(el => {
-    el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'all 0.6s ease-out'; observer.observe(el);
-  });
+  // Scroll animations respect reduced motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.step-card, .benefit-card, .testimonial-card, .comparison-table, .fade-in').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(30px)'; el.style.transition = 'all 0.6s ease-out'; observer.observe(el);
+    });
+  }
 </script>
 
 </body>
