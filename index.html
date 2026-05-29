@@ -1735,10 +1735,33 @@
 </footer>
 
 <script>
-  // Navbar scroll effect
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
+  // Throttle utility for scroll listener
+  function throttle(fn, wait) {
+    let last = 0;
+    return function(...args) {
+      const now = Date.now();
+      if (now - last >= wait) { last = now; fn.apply(this, args); }
+    };
+  }
+
+  // Navbar scroll effect (throttled to 100ms)
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', throttle(() => {
     nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, 100), { passive: true });
+
+  // Mobile menu toggle with proper ARIA
+  function toggleMobileMenu(btn) {
+    const links = document.getElementById('main-nav-links');
+    const isOpen = links.classList.toggle('show');
+    btn.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  // Pause animations when tab hidden (battery + perf)
+  document.addEventListener('visibilitychange', () => {
+    document.querySelectorAll('.float-badge, .hero-badge-icon').forEach(el => {
+      el.style.animationPlayState = document.hidden ? 'paused' : 'running';
+    });
   });
 
   // ─── Lead Capture ───
@@ -1747,17 +1770,13 @@
   function showContactForm(src) {
     const input = document.getElementById(src + '-address');
     const address = input.value.trim();
-
     input.classList.remove('error');
-
     if (!address) {
       input.classList.add('error');
       input.placeholder = 'Please enter your address';
       input.focus();
       return;
     }
-
-    // Hide step 1, show step 2
     document.getElementById(src + '-form').style.display = 'none';
     document.getElementById(src + '-address-display').textContent = address;
     document.getElementById(src + '-step2').classList.add('show');
@@ -1771,20 +1790,13 @@
     const phone = document.getElementById(src + '-phone');
     const email = document.getElementById(src + '-email');
     const submitBtn = document.querySelector('#' + src + '-step2 button');
-
-    // Clear errors
     [name, phone].forEach(f => f.classList.remove('error'));
-
     let valid = true;
     if (!name.value.trim()) { name.classList.add('error'); valid = false; }
     if (!phone.value.trim()) { phone.classList.add('error'); valid = false; }
     if (!valid) return;
-
-    // Disable button while submitting
     submitBtn.disabled = true;
     submitBtn.textContent = 'Submitting...';
-
-    // Send to Formspree
     fetch('https://formspree.io/f/xdawlkkr', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -1803,13 +1815,13 @@
         document.getElementById(src + '-success').classList.add('show');
       } else {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Submit — We\'ll Reach Out Shortly';
+        submitBtn.textContent = "Submit — We'll Reach Out Shortly";
         alert('Something went wrong. Please try again.');
       }
     })
     .catch(() => {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Submit — We\'ll Reach Out Shortly';
+      submitBtn.textContent = "Submit — We'll Reach Out Shortly";
       alert('Connection error. Please try again.');
     });
   }
@@ -1824,41 +1836,37 @@
       input.placeholder = 'Enter your property address';
     });
   });
-
-  // Enter key for lead fields
   document.querySelectorAll('.lead-field').forEach(field => {
     field.addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
-        const src = field.id.split('-')[0];
-        submitLead(src);
-      }
+      if (e.key === 'Enter') submitLead(field.id.split('-')[0]);
     });
     field.addEventListener('input', () => field.classList.remove('error'));
   });
 
-  // Scroll animation observer
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
+  // Scroll animations — respect reduced motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.step-card, .benefit-card, .testimonial-card, .comparison-table, .fade-in').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'all 0.6s ease-out';
+      observer.observe(el);
     });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.step-card, .benefit-card, .testimonial-card, .comparison-table').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease-out';
-    observer.observe(el);
-  });
-
-  document.querySelectorAll('.steps-grid, .benefits-grid, .testimonials-grid').forEach(grid => {
-    const cards = grid.children;
-    Array.from(cards).forEach((card, i) => {
-      card.style.transitionDelay = `${i * 0.15}s`;
+    document.querySelectorAll('.steps-grid, .benefits-grid, .testimonials-grid').forEach(grid => {
+      const cards = grid.children;
+      Array.from(cards).forEach((card, i) => {
+        card.style.transitionDelay = (i * 0.15) + 's';
+      });
     });
-  });
+  }
 </script>
 
 </body>
